@@ -1,10 +1,12 @@
 <h1>This is the homepage</h1>
-<%= link_to "Create new Article", new_page_path %><br><br><br>
+<%= link_to "Create new Article", new_page_path %><br><br>
 <% @article.each do |art| %>
  <%= art.title %><br>
  <%= art.description %><br>
  <span id="category_name" style="color:red">Category:</span>
      <% art.categories.each do |cat| %>
       <%= cat.name %><span> </span>
-  <% end %><hr>
+  <% end %><br>
+  <%= link_to "Edit", edit_page_path(art) %> |
+  <%= link_to "Destroy", page_path(art), method: :delete, data: {confirm: "Are you sure?"} %><br><br>
 <% end %>
