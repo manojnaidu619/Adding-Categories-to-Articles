@@ -1,0 +1,11 @@
+
+<h2>Create New Article with Categories</h2>
+
+<%= form_for @article, url: {action: "create"} do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title , autocomplete: 'off'%><br>
+  <%= f.label :description %><br>
+  <%= f.text_area :description , autocomplete: 'off' %><br>
+  <%= collection_check_boxes(:article, :category_ids, Category.all, :id, :name) %><br><br>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>This is the homepage</h1>
+<%= link_to "Create new Article", new_page_path %><br><br><br>
+<% @article.each do |art| %>
+ <%= art.title %><br>
+ <%= art.description %><br>
+ <span id="category_name" style="color:red">Category:</span>
+     <% art.categories.each do |cat| %>
+      <%= cat.name %><span> </span>
+  <% end %><hr>
+<% end %>
