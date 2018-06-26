@@ -1,24 +1,17 @@
-# README
+# Add Categories to Articles
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Repo is all about implementing Categories feature to our project
 
-Things you may want to cover:
+Things you may want to know:
 
-* Ruby version
+* There are three models in this project..
 
-* System dependencies
+* i.e Article, Category and ArticleCategory
 
-* Configuration
+* Where Article and Category models are linked to ArticleCategory by ``` has_many :through ``` Association.
 
-* Database creation
+* ``` collection_check_boxes(object, method, collection, value_method, text_method) ``` in the form.
 
-* Database initialization
+* Direct code (paste in your form, by changing the attributes) ``` <%= collection_check_boxes(:article, :category_ids, Category.all, :id, :name) %> ```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Whitelist ``` :category_ids => [] ``` in the Controller's Strong parameters.
