@@ -1,6 +1,12 @@
 <h1><%= @category.name %></h1>
-<% @category.articles.each do |cat| %>
- <%= cat.title %><br>
- <%= cat.description %><br><br>
+
+<% if @category.articles.any? %>
+      <% @category.articles.each do |cat| %>
+       <%= cat.title %><br>
+       <%= cat.description %><br><br>
+      <% end %>
+  <% else %>
+    <p>No Articles has been created under <strong><%= @category.name %></strong> category</p>
 <% end %>
+
 <%= link_to "home", root_path  %>
