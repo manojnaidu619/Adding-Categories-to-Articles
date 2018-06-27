@@ -1,0 +1,6 @@
+<h1><%= @category.name %></h1>
+<% @category.articles.each do |cat| %>
+ <%= cat.title %><br>
+ <%= cat.description %><br><br>
+<% end %>
+<%= link_to "home", root_path  %>
