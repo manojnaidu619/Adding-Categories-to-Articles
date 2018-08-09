@@ -6,7 +6,7 @@ class PagesController < ApplicationController
 
   def new
     @article = Article.new
-  end
+  end 
 
 
   def create

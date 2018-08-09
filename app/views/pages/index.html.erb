@@ -2,12 +2,12 @@
 <%= link_to "Create new Article", new_page_path %><br>
 <p><h2>Major categories:</h2></p>
 <% @category.each do |cat| %>
- <%= link_to cat.name, category_filter_path(cat) %> | 
+ <%= link_to cat.name, category_filter_path(cat) %> |
 <% end %><br>
 <p>
 <% @article.each do |art| %>
  <%= art.title %><br>
- <%= art.description %><br>
+ <%= art.description %><br> 
  <span id="category_name" style="color:red">Category:</span>
      <% art.categories.each do |cat| %>
       <%= link_to cat.name, category_filter_path(cat) %><span> </span>
