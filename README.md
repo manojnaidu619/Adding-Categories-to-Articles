@@ -1,5 +1,7 @@
 # Add Categories to Articles
 
+[check the site here!](https://categorize619.herokuapp.com/)
+
 This Repo is all about implementing Categories feature to our project
 
 Things you may want to know:
